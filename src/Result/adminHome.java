@@ -306,11 +306,8 @@ public class adminHome extends javax.swing.JFrame {
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
         // TODO add your handling code here:
-        txt_roll.setText("");
-        txt_name.setText("");
-        txt_fname.setText("");
-        txt_mob.setText("");
-        txt_email.setText("");
+        setVisible(false);
+        new adminHome().setVisible(true);
     }//GEN-LAST:event_btn_resetActionPerformed
 
     private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addActionPerformed
@@ -341,12 +338,8 @@ public class adminHome extends javax.swing.JFrame {
             pst.executeUpdate();
             
             JOptionPane.showMessageDialog(this,"Succesfully Added");
-            
-            txt_roll.setText("");
-            txt_name.setText("");
-            txt_fname.setText("");
-            txt_mob.setText("");
-            txt_email.setText("");
+            setVisible(false);
+            new adminHome().setVisible(true);
           
             
         } catch (ClassNotFoundException | SQLException ex) {
