@@ -20,12 +20,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author PRANTIK
  */
-public class Registered extends javax.swing.JFrame {
+public class StudentsResult extends javax.swing.JFrame {
 
     /**
-     * Creates new form Registered
+     * Creates new form StudentsResult
      */
-    public Registered() {
+    public StudentsResult() {
         initComponents();
         table_details();
     }
@@ -44,7 +44,7 @@ public class Registered extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
-        btn_back3 = new javax.swing.JButton();
+        btn_logout = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -69,7 +69,6 @@ public class Registered extends javax.swing.JFrame {
         });
 
         jButton15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(255, 51, 51));
         jButton15.setText("Registered Students");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +77,7 @@ public class Registered extends javax.swing.JFrame {
         });
 
         jButton16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(255, 0, 0));
         jButton16.setText("All Students Result");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,11 +85,11 @@ public class Registered extends javax.swing.JFrame {
             }
         });
 
-        btn_back3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btn_back3.setText("Log out");
-        btn_back3.addActionListener(new java.awt.event.ActionListener() {
+        btn_logout.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btn_logout.setText("Log out");
+        btn_logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_back3btn_backActionPerformed(evt);
+                btn_logoutbtn_backActionPerformed(evt);
             }
         });
 
@@ -108,7 +108,7 @@ public class Registered extends javax.swing.JFrame {
                                 .addComponent(jButton14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE))))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(btn_back3))
+                        .addComponent(btn_logout))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
@@ -125,35 +125,19 @@ public class Registered extends javax.swing.JFrame {
                 .addComponent(jButton15)
                 .addGap(63, 63, 63)
                 .addComponent(jButton16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(btn_back3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(btn_logout)
                 .addGap(64, 64, 64))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "Roll", "Name", "Father", "Mobile", "Email", "Course", "Branch", "Gender"
+                "Roll No", "No of Sem", "1st Sem ", "2nd Sem", "3rd Sem", "4th Sem", "5th Sem", "6th Sem", "7th Sem", "8th Sem", "CGPA", "Percentage"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable1.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                jTable1ComponentShown(evt);
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -163,28 +147,27 @@ public class Registered extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void table_details()
     {
         int c;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/student_result","root","");
-            String select="select * from registered";
+            String select="select * from result";
             PreparedStatement pst=con.prepareStatement(select);
             ResultSet rs=pst.executeQuery();
             ResultSetMetaData rss=rs.getMetaData();
@@ -198,13 +181,17 @@ public class Registered extends javax.swing.JFrame {
                 {
                     
                     v2.add(rs.getString("roll"));
-                    v2.add(rs.getString("name"));
-                    v2.add(rs.getString("fname"));
-                    v2.add(rs.getString("mobile"));
-                    v2.add(rs.getString("email"));
-                    v2.add(rs.getString("course"));
-                    v2.add(rs.getString("branch"));
-                    v2.add(rs.getString("gender"));
+                    v2.add(rs.getString("sem"));
+                    v2.add(rs.getString("first"));
+                    v2.add(rs.getString("second"));
+                    v2.add(rs.getString("third"));
+                    v2.add(rs.getString("four"));
+                    v2.add(rs.getString("five"));
+                    v2.add(rs.getString("six"));
+                    v2.add(rs.getString("seven"));
+                    v2.add(rs.getString("eight"));
+                    v2.add(rs.getString("cgpa"));
+                    v2.add(rs.getString("percentage"));
                    
                 }
                 df.addRow(v2);
@@ -213,20 +200,15 @@ public class Registered extends javax.swing.JFrame {
           
             
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Registered.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentsResult.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
-    private void btn_back3btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_back3btn_backActionPerformed
+    private void btn_logoutbtn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutbtn_backActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         new admin_index().setVisible(true);
-    }//GEN-LAST:event_btn_back3btn_backActionPerformed
-
-    private void jTable1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTable1ComponentShown
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_jTable1ComponentShown
+    }//GEN-LAST:event_btn_logoutbtn_backActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
@@ -269,26 +251,26 @@ public class Registered extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registered.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StudentsResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registered.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StudentsResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registered.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StudentsResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registered.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StudentsResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Registered().setVisible(true);
+                new StudentsResult().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_back3;
+    private javax.swing.JButton btn_logout;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
